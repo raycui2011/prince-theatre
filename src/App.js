@@ -18,7 +18,7 @@ function App() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to={"/details/cw0121766"} className="nav-link">
+            <Link to={"/classicmovies/fw2488496"} className="nav-link">
               Movie Info
             </Link>
           </li>
@@ -27,7 +27,7 @@ function App() {
       <div className="container mt-3">
         <Switch>
           <Route exact path="/classicmovies" component={Home} />
-          <Route path="/details/:id" component={DetailsPage} />
+          <Route path="/classicmovies/:id" component={DetailsPage} />
         </Switch>
       </div>
     </div>

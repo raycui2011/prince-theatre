@@ -35,14 +35,27 @@ class MovieService {
      return [m1, m2];
   }
 
+
   //get film data from cinema world by given movie id
   getDataFromCinemaWorld(id) {
-    return http.get(`/cinemaworld/movie/${id}`);
+    return axios("https://challenge.lexicondigital.com.au/api/cinemaworld/movie/" + id, 
+      {
+      method: "get",
+      mode: 'no-cors',
+      headers: {
+        'x-api-key': 'Yr2636E6BTD3UCdleMkf7UEdqKnd9n361TQL9An7',       
+      }});
   }
 
   //get film data from film world by given movie id
   getDataFromFilmWorld(id) {
-    return http.get(`/filmworld/movie/${id}`);
+    return axios("https://challenge.lexicondigital.com.au/api/filmworld/movie/" + id, 
+      {
+      method: "get",
+      mode: 'no-cors',
+      headers: {
+        'x-api-key': 'Yr2636E6BTD3UCdleMkf7UEdqKnd9n361TQL9An7',       
+      }});
   }
 }
 

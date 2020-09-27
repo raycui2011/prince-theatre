@@ -26,7 +26,6 @@ class Home extends Component{
         MovieService.getAllFromFilmWorld().then(res => {
             this.setState({ filmworld: res.data});
             this.setState({ movies: res.data});
-            console.log(res.data);
           }).catch(err => {
             this.setState({
                 isLoading: false
