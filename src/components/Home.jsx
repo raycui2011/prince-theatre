@@ -55,14 +55,16 @@ class Home extends Component{
                 <div>
                     <h1 className="text-center">Prince's Theartre</h1>
                     <h3 className="text-center">Classic Movies At Home</h3>
-                    <table>
-                        <tbody></tbody>
-                        <tr>
+                    <div>
+                        <table>
                             {this.state.filmworld.Movies && this.state.filmworld.Movies.map((movie, index) => (
-                                <td className="list-group-item" key={index}>{movie.Title}</td>
+                                <tr>
+                                    <td key={index}>{movie.Title}</td>
+                                    <td key={index}>{movie.ID}</td>
+                                </tr>
                             ))}
-                        </tr>
-                    </table>
+                        </table>
+                    </div>
                 </div>
         )
     }
